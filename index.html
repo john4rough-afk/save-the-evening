@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#11141f">
+  <title>СПАСИ ВЕЧЕР</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="header">
+      <a class="wordmark" href="#" aria-label="Спаси вечер"><span class="wordmark-icon">✳</span> ВЕЧЕР.EXE</a>
+      <span class="header-note"><i></i> ОПЕРАЦИЯ: СПАСТИ ВЕЧЕР</span>
+    </header>
+
+    <section class="game-card" aria-label="Игра Спаси вечер">
+      <div class="hud" aria-label="Игровая статистика">
+        <div class="hud-stat lives-stat"><span class="hud-icon">♥</span><span class="hud-label">ЖИЗНИ</span><strong id="lives">♥ ♥ ♥</strong></div>
+        <div class="hud-stat score-stat"><span class="hud-icon">✦</span><span class="hud-label">ОЧКИ</span><strong id="score">000</strong></div>
+        <div class="hud-stat time-stat"><span class="hud-icon">◷</span><span class="hud-label">ВРЕМЯ</span><strong><span id="time">45</span><small>с</small></strong></div>
+      </div>
+      <div class="playfield-wrap">
+        <canvas id="playfield" aria-label="Игровое поле. Лови хорошие события, избегай хаоса." tabindex="0"></canvas>
+        <div class="overlay start-overlay" id="start-overlay">
+          <div class="intro-card">
+            <div class="intro-badge"><span>✦</span> СЛУЖБА СПАСЕНИЯ ВЕЧЕРОВ</div>
+            <div class="game-title"><span>🎮</span> СПАСИ ВЕЧЕР</div>
+            <p class="lead">Алексей снова всё усложнил.</p>
+            <p class="sublead">Только Ксюша может спасти этот вечер.</p>
+            <div class="howto"><span class="keys"><kbd>←</kbd><kbd>→</kbd> <b>или</b> <kbd>A</kbd><kbd>D</kbd></span><span>двигайся и лови хорошее</span><span class="touch-hint">На телефоне — веди пальцем</span></div>
+            <button class="button primary-button" id="start-button" type="button"><span>▶</span> НАЧАТЬ СПАСЕНИЕ</button>
+            <div class="round-note">45 СЕКУНД · 3 ЖИЗНИ · ВСЁ НА КСЮШЕ</div>
+          </div>
+        </div>
+        <div class="overlay result-overlay hidden" id="result-overlay" aria-live="polite">
+          <div class="result-card">
+            <div class="result-kicker" id="result-kicker">МИССИЯ ЗАВЕРШЕНА</div>
+            <div class="result-title" id="result-title">ВЕЧЕР СПАСЁН</div>
+            <p class="result-message" id="result-message"></p>
+            <div class="result-stats">
+              <div><span>СОБРАНО ХОРОШЕГО</span><strong id="final-good">0</strong></div>
+              <div><span>ПОЙМАНО ХАОСА</span><strong id="final-chaos">0</strong></div>
+              <div><span>ИТОГ</span><strong id="final-percent">0%</strong></div>
+            </div>
+            <div class="secret-note hidden" id="secret-note"><span>СИСТЕМА СООБЩАЕТ:</span>Ксюша официально признана лучшим человеком для спасения вечеров.</div>
+            <button class="button primary-button replay-button" id="replay-button" type="button"><span>↻</span> СПАСТИ ЕЩЁ РАЗ</button>
+          </div>
+        </div>
+      </div>
+      <div class="field-caption"><span><i class="status-dot"></i> СИСТЕМА НАБЛЮДЕНИЯ АКТИВНА</span><span>ХОРОШЕЕ ВЫСОКО · ХАОС НЕ ЛОВИТЬ</span></div>
+    </section>
+    <footer class="footer"><span>ПЕРСОНАЛЬНАЯ ОПЕРАЦИЯ АЛЕКСЕЯ</span><span>СДЕЛАНО С ТЕПЛОМ <b>♥</b></span></footer>
+  </main>
+</body>
+</html>
